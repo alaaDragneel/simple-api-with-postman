@@ -62,7 +62,7 @@ trait ApiResourceTrait
 				'status' => $this->checkStatuCodes($code), 
 				'code' => $code, 
 				'errors' => $error 
-			]);
+			], $code);
 		}
 
 		if (is_object($data) && ($data instanceof Collection || $data instanceof LengthAwarePaginator)) {
